@@ -1,7 +1,135 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": "205d792c-92fd-4adb-bab0-cb60bd09c524"
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-  }
+    "core": {
+      "projectType": "library",
+      "root": "projects/core",
+      "sourceRoot": "projects/core/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/core/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/core/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/core/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/core/src/test.ts",
+            "tsConfig": "projects/core/tsconfig.spec.json",
+            "karmaConfig": "projects/core/karma.conf.js"
+          }
+        }
+      }
+    },
+    "coponents": {
+      "projectType": "library",
+      "root": "projects/coponents",
+      "sourceRoot": "projects/coponents/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/coponents/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/coponents/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/coponents/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/coponents/src/test.ts",
+            "tsConfig": "projects/coponents/tsconfig.spec.json",
+            "karmaConfig": "projects/coponents/karma.conf.js"
+          }
+        }
+      }
+    },
+    "components": {
+      "projectType": "library",
+      "root": "projects/components",
+      "sourceRoot": "projects/components/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/components/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/components/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/components/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/components/src/test.ts",
+            "tsConfig": "projects/components/tsconfig.spec.json",
+            "karmaConfig": "projects/components/karma.conf.js"
+          }
+        }
+      }
+    },
+    "guden-lib": {
+      "projectType": "library",
+      "root": "projects/guden-lib",
+      "sourceRoot": "projects/guden-lib/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/guden-lib/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/guden-lib/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/guden-lib/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/guden-lib/src/test.ts",
+            "tsConfig": "projects/guden-lib/tsconfig.spec.json",
+            "karmaConfig": "projects/guden-lib/karma.conf.js"
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "core"
 }

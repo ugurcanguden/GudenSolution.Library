@@ -2,11 +2,30 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "strictPropertyInitialization": false,
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "noImplicitOverride": true,
+    "paths": {
+      "components": [
+        "dist/components/components",
+        "dist/components"
+      ],
+      "coponents": [
+        "dist/coponents/coponents",
+        "dist/coponents"
+      ],
+      "core": [
+        "dist/core/core",
+        "dist/core"
+      ],
+      "guden-lib": [
+        "dist/guden-lib/guden-lib",
+        "dist/guden-lib"
+      ]
+    },
     "noPropertyAccessFromIndexSignature": true,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
